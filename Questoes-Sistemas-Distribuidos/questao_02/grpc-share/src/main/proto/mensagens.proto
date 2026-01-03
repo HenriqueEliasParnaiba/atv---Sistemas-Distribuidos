@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "br.edu.ifpb.grpc";
+option java_outer_classname = "MensagensProto";
+
+service FluxoEventos {
+  rpc Enviar(stream Mensagem) returns (stream Ack);
+}
+
+message Mensagem {
+  string id = 1;
+  string conteudo = 2;
+}
+
+message Ack {
+  string id = 1;
+  string status = 2;
+}

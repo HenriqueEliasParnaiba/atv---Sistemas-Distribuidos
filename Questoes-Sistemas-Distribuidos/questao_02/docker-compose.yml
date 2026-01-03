@@ -1,0 +1,17 @@
+services:
+  grpc-server:
+    build: ./grpc-server
+    container_name: q2_grpc_server
+    environment:
+      - GRPC_PORT=50051
+    ports:
+      - "50051:50051"
+
+  grpc-client:
+    build: ./grpc-client
+    container_name: q2_grpc_client
+    depends_on:
+      - grpc-server
+    environment:
+      - GRPC_HOST=grpc-server
+      - GRPC_PORT=50051

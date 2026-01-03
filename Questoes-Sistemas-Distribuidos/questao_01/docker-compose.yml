@@ -1,0 +1,34 @@
+services:
+  serverapp:
+    build: ./async-serverapp
+    environment:
+      - APP_NAME=serverapp
+      - APP_PORT=8083
+    ports:
+      - "8083:8083"
+
+  receiver:
+    build: ./async-receive-pull
+    depends_on:
+      - serverapp
+    environment:
+      - APP_NAME=receiver
+      - APP_PORT=8082
+      - NEXT_URL=http://serverapp:8083/event
+
+  sender:
+    build: ./async-sender-pull
+    depends_on:
+      - receiver
+    environment:
+      - APP_NAME=sender
+      - APP_PORT=8081
+      - NEXT_URL=http://receiver:8082/event
+
+  clientapp:
+    build: ./async-clientapp
+    depends_on:
+      - sender
+    environment:
+      - APP_NAME=clientapp
+      - TARGET_URL=http://sender:8081/event
