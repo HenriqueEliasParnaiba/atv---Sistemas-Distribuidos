@@ -2,16 +2,16 @@
 Comunicação Indireta, Assincronicidade e Garantia de Entrega de Mensagens
 
 
-### ✅ Questão 1 – Arquitetura baseada em eventos (HTTP + Docker)
+###  Questão 1 – Arquitetura baseada em eventos (HTTP + Docker)
 
-#### ▶️ Subir os serviços
+####  Subir os serviços
 
 ```bash
 cd questao_01
-docker compose up --build****
+docker compose up --build
 
 
-⏹ Encerrar a execução
+ Encerrar a execução
 
 Quando terminar os testes, pressione:
 
@@ -26,8 +26,8 @@ Isso irá:
 ✔ parar os containers
 ✔ liberar a rede gerada pelo compose
 
-<br>
-✅ Questão 2 – gRPC Assíncrono (Streaming Bidirecional)
+
+ Questão 2 – gRPC Assíncrono (Streaming Bidirecional)
 
 A Questão 2 é composta por três módulos Maven independentes:
 
@@ -36,9 +36,9 @@ grpc-server  → servidor gRPC
 grpc-client  → cliente gRPC
 
 
-A execução deve seguir esta ordem obrigatória 👇
+A execução deve seguir esta ordem obrigatória: 
 
-1️⃣ Compilar o módulo compartilhado (grpc-share)
+Compilar o módulo compartilhado (grpc-share)
 
 Abra o terminal na pasta do projeto e execute:
 
@@ -57,7 +57,7 @@ BUILD SUCCESS
 
 significa que está tudo certo 
 
-2️⃣ Iniciar o Servidor gRPC (grpc-server)
+Iniciar o Servidor gRPC (grpc-server)
 
 Agora execute:
 
@@ -81,7 +81,7 @@ Você deverá ver algo como:
 
  Deixe esse terminal aberto — o servidor deve continuar rodando.
 
-3️⃣ Executar o Cliente gRPC (grpc-client)
+Executar o Cliente gRPC (grpc-client)
 
 Abra um novo terminal e rode:
 
