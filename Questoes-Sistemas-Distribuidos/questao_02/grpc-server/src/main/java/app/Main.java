@@ -9,6 +9,23 @@ import io.grpc.stub.StreamObserver;
 
 import java.time.LocalDateTime;
 
+
+/**
+ * Servidor gRPC responsável por receber um fluxo de Mensagem
+ * do cliente e responder com ACKs confirmando o processamento.
+ *
+ * Papel na arquitetura da questão 2:
+ * - Atuar como nó consumidor das mensagens.
+ * - Implementar o serviço definido no arquivo .proto (FluxoEventos).
+ *
+ * Estados principais:
+ * - GRPC_PORT: porta em que o servidor gRPC ficará escutando.
+ *
+ * Comportamento principal:
+ * - main(): configura e inicializa o servidor gRPC.
+ * - FluxoEventosImpl: implementa o método enviar(), que trata o stream
+ *   de mensagens recebidas e envia ACKs pelo responseObserver.
+ */
 public class Main {
 
     public static void main(String[] args) throws Exception {

@@ -13,6 +13,23 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 
+
+/**
+ * Nó receiver HTTP responsável por receber as mensagens encaminhadas
+ * pelo sender e registrar o recebimento.
+ *
+ * Papel na arquitetura da questão 1:
+ * - Expõe um servidor HTTP que recebe requisições do sender.
+ * - Faz o log das mensagens recebidas e responde com HTTP 200.
+ *
+ * Estados principais:
+ * - APP_NAME: nome lógico do nó para logs.
+ * - SERVER_PORT: porta em que o servidor HTTP escuta.
+ *
+ * Comportamento principal:
+ * - main(): configura e inicia o HttpServer.
+ * - Handler interno: processa cada requisição, registra o corpo e responde "OK".
+ */
 public class Main {
 
        public static void main(String[] args) throws Exception {

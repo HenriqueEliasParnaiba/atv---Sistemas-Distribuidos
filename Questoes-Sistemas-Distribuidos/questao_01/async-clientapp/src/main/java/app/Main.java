@@ -8,6 +8,23 @@ import java.time.LocalDateTime;
 import java.util.UUID;
 
 
+
+/**
+ * Nó cliente HTTP responsável por gerar mensagens e enviá-las
+ * para o nó de envio (sender) através de requisições POST.
+ *
+ * Papel na arquitetura da questão 1:
+ * - Produz eventos com um identificador único e timestamp.
+ * - Envia as mensagens para o serviço HTTP configurado na variável TARGET_URL.
+ *
+ * Estados principais (variáveis):
+ * - APP_NAME: nome lógico do nó, usado apenas para logs.
+ * - TARGET_URL: URL do endpoint HTTP do sender.
+ *
+ * Comportamento principal:
+ * - main(): entra em um laço gerando mensagens e chamando o método send().
+ * - send(): abre uma conexão HTTP e publica o corpo da mensagem.
+ */
 public class Main {
 
         public static void main(String[] args) throws Exception {

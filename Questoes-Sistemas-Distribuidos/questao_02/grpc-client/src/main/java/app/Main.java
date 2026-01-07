@@ -10,6 +10,23 @@ import io.grpc.stub.StreamObserver;
 import java.time.LocalDateTime;
 import java.util.UUID;
 
+
+/**
+ * Cliente gRPC responsável por se conectar ao servidor e enviar
+ * um fluxo de mensagens de forma assíncrona.
+ *
+ * Papel na arquitetura da questão 2:
+ * - Atuar como nó produtor de mensagens.
+ * - Abrir um stream gRPC com o servidor e enviar várias Mensagem.
+ *
+ * Estados principais:
+ * - GRPC_HOST: endereço do servidor gRPC.
+ * - GRPC_PORT: porta do servidor gRPC.
+ *
+ * Comportamento principal:
+ * - main(): cria o canal, o stub assíncrono e envia um conjunto de mensagens,
+ *   aguardando os ACKs retornados pelo servidor.
+ */
 public class Main {
 
     public static void main(String[] args) throws Exception {

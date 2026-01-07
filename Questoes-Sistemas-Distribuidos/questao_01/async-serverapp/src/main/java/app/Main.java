@@ -11,6 +11,22 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 
+
+/**
+ * Nó destino (serverapp) responsável por representar o serviço final
+ * que consome a mensagem encaminhada pela cadeia clientapp → sender → receiver.
+ *
+ * Papel na arquitetura da questão 1:
+ * - Receber a mensagem final já encaminhada e confirmar o processamento.
+ *
+ * Estados principais:
+ * - APP_NAME: nome lógico do nó para logs.
+ * - SERVER_PORT: porta do servidor HTTP que recebe as mensagens finais.
+ *
+ * Comportamento principal:
+ * - main(): cria e inicia o HttpServer.
+ * - Handler interno: valida o método HTTP, registra o corpo e responde HTTP 200.
+ */
 public class Main {
 
         public static void main(String[] args) throws Exception {

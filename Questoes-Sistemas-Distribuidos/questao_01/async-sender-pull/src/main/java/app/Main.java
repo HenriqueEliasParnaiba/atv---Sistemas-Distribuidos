@@ -13,6 +13,24 @@ import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
 
 
+
+/**
+ * Nó sender HTTP responsável por receber as requisições do clientapp
+ * e repassá-las para o receiver, atuando como um intermediário.
+ *
+ * Papel na arquitetura da questão 1:
+ * - Recebe eventos do clientapp na rota /event.
+ * - Encaminha os eventos para o serviço configurado em TARGET_URL_RECEIVER.
+ *
+ * Estados principais:
+ * - APP_NAME: nome lógico do nó para logs.
+ * - SERVER_PORT: porta do servidor HTTP que recebe do clientapp.
+ * - TARGET_URL_RECEIVER: URL do endpoint do receiver.
+ *
+ * Comportamento principal:
+ * - main(): inicializa o HttpServer e registra o handler.
+ * - Handler interno: lê o corpo, encaminha via HTTP POST ao receiver, responde "OK".
+ */
 public class Main {
 
     
