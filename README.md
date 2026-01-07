@@ -34,17 +34,17 @@ docker compose down
 
 Isso irá:
 
-✔ parar os containers
-✔ liberar a rede gerada pelo compose
+parar os containers
+liberar a rede gerada pelo compose
 
 
- Questão 2 – gRPC Assíncrono (Streaming Bidirecional)
+Questão 2 – gRPC Assíncrono (Streaming Bidirecional)
 
 A Questão 2 é composta por três módulos Maven independentes:
 
-grpc-share   → módulo compartilhado com o .proto e DTOs
-grpc-server  → servidor gRPC
-grpc-client  → cliente gRPC
+grpc-share   => módulo compartilhado com o .proto e DTOs
+grpc-server  =>  servidor gRPC
+grpc-client  => cliente gRPC
 
 
 A execução deve seguir esta ordem obrigatória: 
