@@ -1,4 +1,15 @@
 # atv---Sistemas-Distribuidos
+
+## 📌 Controle de Versão
+
+| Versão | Data       | Descrição                                                    | Responsável |
+|-------:|-----------:|-------------------------------------------------------------|-------------|
+| 1.0    | 22/12/2025 | Criação do projeto e implementação das Questões 1, 2 e 3    | Henrique Elias Parnaíba |
+| 1.1    | 03/01/2026 | Ajustes no README e melhoria de documentação/comentários    | Henrique Elias Parnaíba |
+| 1.2    | 07/01/2026 | Inclusão de comentários explicativos no código e correções  | Henrique Elias Parnaíba |
+
+
+
 Comunicação Indireta, Assincronicidade e Garantia de Entrega de Mensagens
 
 
